@@ -16,6 +16,8 @@
 		02F8F57829F2FF6700C5F29E /* StoryBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F8F57729F2FF6700C5F29E /* StoryBundle.swift */; };
 		02F8F57A29F3008800C5F29E /* StoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F8F57929F3008800C5F29E /* StoryViewModel.swift */; };
 		02F8F57C29F3064C00C5F29E /* StoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F8F57B29F3064C00C5F29E /* StoryView.swift */; };
+		02F8F57E29F31FDB00C5F29E /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F8F57D29F31FDB00C5F29E /* ProfileView.swift */; };
+		02F8F58029F3202B00C5F29E /* StoryCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F8F57F29F3202B00C5F29E /* StoryCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		02F8F57729F2FF6700C5F29E /* StoryBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBundle.swift; sourceTree = "<group>"; };
 		02F8F57929F3008800C5F29E /* StoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewModel.swift; sourceTree = "<group>"; };
 		02F8F57B29F3064C00C5F29E /* StoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryView.swift; sourceTree = "<group>"; };
+		02F8F57D29F31FDB00C5F29E /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		02F8F57F29F3202B00C5F29E /* StoryCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,8 @@
 			children = (
 				02F8F57529F2D14E00C5F29E /* HomeView.swift */,
 				02F8F57B29F3064C00C5F29E /* StoryView.swift */,
+				02F8F57D29F31FDB00C5F29E /* ProfileView.swift */,
+				02F8F57F29F3202B00C5F29E /* StoryCardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -189,7 +195,9 @@
 				02F8F57629F2D14E00C5F29E /* HomeView.swift in Sources */,
 				02F8F57829F2FF6700C5F29E /* StoryBundle.swift in Sources */,
 				02F8F57A29F3008800C5F29E /* StoryViewModel.swift in Sources */,
+				02F8F58029F3202B00C5F29E /* StoryCardView.swift in Sources */,
 				02F8F55829F2595A00C5F29E /* StoryAppApp.swift in Sources */,
+				02F8F57E29F31FDB00C5F29E /* ProfileView.swift in Sources */,
 				02F8F56C29F2608B00C5F29E /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
