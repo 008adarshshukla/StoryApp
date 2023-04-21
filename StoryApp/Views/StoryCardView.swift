@@ -16,6 +16,8 @@ struct StoryCardView: View {
     @State var timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
     //MARK: Progress...
     @State private var timerProgress: CGFloat = 0
+    //MARK: Pause State.
+    @State private var isPaused: Bool = false
     
     var body: some View {
         
@@ -131,6 +133,17 @@ struct StoryCardView: View {
                               axis: (x: 0, y: 1, z: 0),
                               anchor: proxy.frame(in: .global).minX > 0 ? .leading : .trailing,
                               perspective: 2.5)
+            
+            //MARK: Long Press gesture to pause the story
+            .onLongPressGesture(minimumDuration: 1) {
+                if isPaused {
+                    timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
+                    isPaused = false
+                } else {
+                    timer.upstream.connect().cancel()
+                    isPaused = true
+                }
+            }
         }
         //MARK: Resting timer
         .onAppear {
