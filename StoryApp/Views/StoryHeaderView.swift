@@ -9,6 +9,7 @@ import SwiftUI
 
 struct StoryHeaderView: View {
     
+    @State private var showStroyDetails: Bool = false
     @State private var usernames: [String] = ["James", "Mark", "Carl", "Emma",
     "Olivia"]
     
@@ -18,8 +19,15 @@ struct StoryHeaderView: View {
                 currentUserProfileView()
                 ForEach(1...5, id: \.self) { index in
                     otherUsersProfileView(index: index)
+                        .onTapGesture {
+                            showStroyDetails = true
+                        }
                 }
             }
+            .padding(.horizontal, 10)
+        }
+        .fullScreenCover(isPresented: $showStroyDetails) {
+            StoryDetailsView()
         }
     }
     

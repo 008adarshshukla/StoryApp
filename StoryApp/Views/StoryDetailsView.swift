@@ -10,35 +10,40 @@ import AVKit
 
 struct StoryDetailsView: View {
     
-    @State var player = AVPlayer(url: Bundle.main.url(forResource: "Women",
-                                                      withExtension: "mp4")!)
+    @State var player = AVPlayer(url: Bundle.main.url(forResource: "Women",withExtension: "mp4")!)
+    @Environment(\.dismiss) var dismiss
     @State private var selectedTab: Int = 0
+    @State var isSwipeDisabled: Bool = true
     
     var body: some View {
         ZStack {
             Color.black
                 .edgesIgnoringSafeArea(.all)
             
-            TabView {
+            TabView(selection: $selectedTab) {
                 Image("Constellation")
                     .resizable()
                     .scaledToFill()
                     .tag(0)
+                    .gesture(isSwipeDisabled ? DragGesture() : nil)
                 
                 Image("Fire")
                     .resizable()
                     .scaledToFill()
                     .tag(1)
+                    .gesture(isSwipeDisabled ? DragGesture() : nil)
                 
                 Image("Planet")
                     .resizable()
                     .scaledToFill()
-                    .tag(3)
+                    .tag(2)
+                    .gesture(isSwipeDisabled ? DragGesture() : nil)
                 
                 Image("Flower")
                     .resizable()
                     .scaledToFill()
-                    .tag(4)
+                    .tag(3)
+                    .gesture(isSwipeDisabled ? DragGesture() : nil)
                 
                 VStack {
                     VideoPlayer(player: player)
@@ -48,14 +53,20 @@ struct StoryDetailsView: View {
                         }
                     PlayerControlsView(player: player)
                 }
-                .tag(5)
-                
+                .tag(4)
+                .gesture(isSwipeDisabled ? DragGesture() : nil)
                 
             }
             .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - 20)
             .tabViewStyle(.page(indexDisplayMode: .always))
             .onTapGesture {
-                
+                if selectedTab >= 0 && selectedTab < 4 {
+                    selectedTab += 1
+                    print(self.selectedTab)
+                }
+                else {
+                    dismiss()
+                }
             }
         }
     }
