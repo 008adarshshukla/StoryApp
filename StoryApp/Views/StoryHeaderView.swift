@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct StoryView: View {
+struct StoryHeaderView: View {
     
     @State private var usernames: [String] = ["James", "Mark", "Carl", "Emma",
     "Olivia"]
@@ -76,8 +76,8 @@ struct StoryView: View {
     }
 }
 
-struct StoryView_Previews: PreviewProvider {
+struct StoryHeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        StoryView()
+        StoryHeaderView()
     }
 }
