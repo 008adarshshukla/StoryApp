@@ -20,5 +20,6 @@ struct StoryBundle: Identifiable, Hashable {
 
 struct Story: Identifiable, Hashable {
     var id = UUID().uuidString
+    var isImage: Bool
     var imageURL: String
 }

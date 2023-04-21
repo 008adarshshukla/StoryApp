@@ -27,10 +27,15 @@ struct StoryCardView: View {
                 let index = min(Int(timerProgress), bundle.stories.count - 1)
                 
                 let story = bundle.stories[index]
-                Image(story.imageURL)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
                 
+                if story.isImage {
+                    Image(story.imageURL)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                }
+                else {
+                    VideoPlayerView()
+                }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
             

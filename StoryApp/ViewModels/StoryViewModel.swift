@@ -11,14 +11,16 @@ class StoryViewModel: ObservableObject {
     
     @Published var stories: [StoryBundle] = [
         StoryBundle(profileName: "Mark", profileImage: "Person1", stories: [
-            Story(imageURL: "Planet"),
-            Story(imageURL: "Smoke"),
-            Story(imageURL: "Fire")
+            Story(isImage: true, imageURL: "Planet"),
+            Story(isImage: true, imageURL: "Smoke"),
+            Story(isImage: true, imageURL: "Fire"),
+            Story(isImage: false, imageURL: "")
         ]),
         StoryBundle(profileName: "Carl", profileImage: "Person2", stories: [
-            Story(imageURL: "Constellation"),
-            Story(imageURL: "Flower"),
-            Story(imageURL: "Fireworks")
+            Story(isImage: true, imageURL: "Constellation"),
+            Story(isImage: true, imageURL: "Flower"),
+            Story(isImage: true, imageURL: "Fireworks"),
+            Story(isImage: false, imageURL: "")
         ]),
     ]
     
