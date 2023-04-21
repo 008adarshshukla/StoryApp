@@ -51,7 +51,7 @@ struct HomeView: View {
                     .padding(.top, 10)
                 }
             }
-            .navigationTitle("Instagram")
+            .navigationTitle("Story App")
         }
         .overlay(alignment: .center) {
             StoryView()
